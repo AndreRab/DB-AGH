@@ -54,7 +54,7 @@ GO
 CREATE TABLE dbo.Orders (
     id              INT IDENTITY(1,1) NOT NULL,
     customerID      INT               NOT NULL,
-    price           DECIMAL(10,2)     NOT NULL,
+    price           DECIMAL(10,2)     DEFAULT 0,
     discount        DECIMAL(10,2)     NOT NULL CONSTRAINT DF_Orders_Discount DEFAULT(0),
     orderDate       DATETIME          NOT NULL CONSTRAINT DF_Orders_OrderDate DEFAULT(GETDATE()),
     deliveryDate    DATETIME          NULL,
@@ -76,7 +76,7 @@ CREATE TABLE dbo.OrderPosition (
     orderID   INT               NOT NULL,
     quantity  INT               NOT NULL,
     productID INT               NOT NULL,
-    unitPrice DECIMAL(10,2)               NOT NULL,
+    unitPrice DECIMAL(10,2)     DEFAULT 0,
 
     CONSTRAINT PK_OrderPosition PRIMARY KEY (id),
     CONSTRAINT FK_OrderPosition_Orders
