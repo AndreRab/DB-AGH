@@ -15,9 +15,9 @@ The system is built with advanced database features including **Stored Procedure
 ---
 
 ## Database Schema
-*(Place your database schema diagram here)*
 
-![Database Schema Placeholder](path/to/schema_image.png)
+<img width="566" height="552" alt="image" src="https://github.com/user-attachments/assets/219f86ff-4a06-49da-aab7-09cbff3b7c20" />
+
 
 ---
 
